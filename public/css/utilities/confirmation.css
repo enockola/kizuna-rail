@@ -404,16 +404,184 @@ article.confirmation-page {
         opacity: 1;
     }
 }
-
 @media print {
-    article.confirmation-page {
-        .confirmation-actions {
-            display: none;
-        }
 
-        .confirmation-header {
-            background-color: white;
-            border: 2px solid var(--clr-primary);
-        }
-    }
+  @page {
+    size: letter;
+    margin: 0.4in;
+  }
+
+  html, body {
+    margin: 0 !important;
+    padding: 0 !important;
+    background: #fff !important;
+    color: #000 !important;
+  }
+
+  header, nav, footer,
+  .no-print,
+  .confirmation-actions,
+  button, .btn {
+    display: none !important;
+  }
+
+  article.confirmation-page,
+  article.confirmation-page .confirmation-content,
+  article.confirmation-page .booking-details,
+  article.confirmation-page .passengers-info,
+  article.confirmation-page .next-steps,
+  article.confirmation-page .important-info {
+    max-width: 100% !important;
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    border: 0 !important;
+    box-shadow: none !important;
+    background: transparent !important;
+  }
+
+  article.confirmation-page .confirmation-header {
+    gap: 6px !important;
+    padding: 10px !important;
+    margin-bottom: 10px !important;
+    border-radius: 0 !important;
+    background: transparent !important;
+    border: 1px solid #000 !important;
+  }
+
+  article.confirmation-page .confirmation-title {
+    font-size: 16pt !important;
+    line-height: 1.1 !important;
+    margin: 0 !important;
+  }
+
+  article.confirmation-page .confirmation-message {
+    max-width: none !important;
+    font-size: 10pt !important;
+    line-height: 1.25 !important;
+    margin: 0 !important;
+  }
+
+  article.confirmation-page .success-icon svg {
+    width: 26px !important;
+    height: 26px !important;
+    filter: none !important;
+  }
+
+  article.confirmation-page .booking-reference {
+    padding: 6px 10px !important;
+    margin-top: 4px !important;
+    border: 1px dashed #000 !important;
+  }
+
+  article.confirmation-page .reference-number {
+    font-size: 12pt !important;
+    letter-spacing: 0.04em !important;
+  }
+
+  article.confirmation-page .confirmation-content {
+    gap: 10px !important;
+  }
+
+  article.confirmation-page .section-title {
+    font-size: 12pt !important;
+    margin: 0 0 6px 0 !important;
+    padding-bottom: 4px !important;
+    border-bottom: 1px solid #000 !important;
+  }
+
+  h1, h2, h3 { margin: 0 0 6px !important; }
+  p { margin: 0 0 6px !important; }
+
+
+  article.confirmation-page .details-grid {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr !important;
+    gap: 8px !important;
+    margin: 0 0 8px !important;
+  }
+
+
+  article.confirmation-page .passengers-list {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr !important;
+    gap: 6px !important;
+  }
+
+  article.confirmation-page .detail-card,
+  article.confirmation-page .passenger-info-card {
+    padding: 6px !important;
+    border: 1px solid #000 !important;
+    break-inside: avoid !important;
+    page-break-inside: avoid !important;
+  }
+
+
+  article.confirmation-page .passenger-header { padding: 4px 6px !important; }
+  article.confirmation-page .passenger-title { font-size: 10pt !important; margin: 0 !important; }
+  article.confirmation-page .passenger-details {
+    padding: 6px !important;
+    gap: 6px !important;
+    flex-direction: row !important;
+  }
+  article.confirmation-page .passenger-label { font-size: 8pt !important; }
+  article.confirmation-page .passenger-value { font-size: 9pt !important; }
+
+
+  /* article.confirmation-page .next-steps {
+    display: none !important;
+  } */
+
+    article.confirmation-page .next-steps {
+    display: block !important;
+    margin-top: 8px !important;
+  }
+
+  article.confirmation-page .steps-list {
+    gap: 6px !important;
+  }
+
+  article.confirmation-page .step-item {
+    display: grid !important;
+    grid-template-columns: auto 1fr !important;
+    gap: 6px !important;
+    align-items: start !important;
+    break-inside: avoid !important;
+  }
+
+  article.confirmation-page .step-number {
+    width: 20px !important;
+    height: 20px !important;
+    font-size: 9pt !important;
+    line-height: 1 !important;
+    background: #000 !important;
+    color: #fff !important;
+  }
+
+  article.confirmation-page .step-title {
+    font-size: 10pt !important;
+    margin: 0 !important;
+  }
+
+  article.confirmation-page .step-description {
+    font-size: 9pt !important;
+    line-height: 1.2 !important;
+    margin: 0 !important;
+  }
+
+
+
+  
+  article.confirmation-page .important-info {
+    display: none !important;
+  }
+ 
+
+
+  ul, li { margin: 0 !important; padding: 0 !important; }
+  article.confirmation-page .info-list { margin-top: 4px !important; padding-left: 16px !important; }
+  article.confirmation-page .info-list li { margin-bottom: 3px !important; }
+
+
+  a[href]:after { content: "" !important; }
 }

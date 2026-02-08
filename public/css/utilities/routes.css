@@ -1,3 +1,10 @@
+.filters-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.filter-right { justify-self: end; }
+
+
 .routes-grid {
     display: flex;
     flex-direction: column;
